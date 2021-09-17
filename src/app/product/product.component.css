@@ -1,0 +1,38 @@
+main {
+  display: grid;
+  grid-template-columns: auto;
+}
+.productFlex {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5pt;
+}
+
+#filterOption {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 280px auto;
+  }
+  .productFlex {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5pt;
+  }
+  #filterOption {
+    display: initial;
+  }
+}
+.productFlex .product {
+  border: 10px solid transparent;
+  transition: 200ms all;
+}
+.productFlex .product:hover {
+  border: 1px solid transparent;
+}
+a {
+  text-decoration: none;
+}

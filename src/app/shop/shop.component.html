@@ -1,0 +1,18 @@
+<div class="card">
+  <img class="card-image" src="{{ product.main_img }}" alt="" />
+  <h1 class="card-title">{{ product.name }}</h1>
+  <div class="card-body">
+    Category: {{ product.category }} composition:
+    {{ product.composition }} description: {{ product.description }} fit:
+    {{ product.fit }}
+  </div>
+  <div class="showcase">
+    <img class="card-image" src="{{ product.other_img_1 }}" alt="" />
+    <img class="card-image" src="{{ product.other_img_2 }}" alt="" />
+    <img class="card-image" src="{{ product.other_img_3 }}" alt="" />
+  </div>
+  <div class="card-footer">
+    {{ product.price }} - {{ product.sub_category }} -
+    {{ product.size.join(" | ") }}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<main class="bg-white">
+  <aside class="border-2 mx-2" id="filterOption">
+    <div class="text-sm filter-card">Filter</div>
+    <div class="filter-card">
+      <div class="text-xs">Categories</div>
+      <ul>
+        <li>Fashion Accessories</li>
+      </ul>
+    </div>
+    <div class="filter-card">
+      <div class="text-xs">PRICE</div>
+      <div>
+        <input type="range" class="w-full" />
+      </div>
+      <div class="flex">
+        <select class="w-full text-xs">
+          <option class="text-xs">Minimum</option>
+        </select>
+        <select class="w-full text-xs">
+          <option class="text-xs">Maximum</option>
+        </select>
+      </div>
+    </div>
+  </aside>
+  <section class="border-2 mx-2 px-2">
+    <h6>Fashion Accessories</h6>
+    <!-- <hr /> -->
+    <div class="productFlex">
+      <div *ngFor="let prod of product" class="product">
+        <app-single-product
+          pid="{{ prod.id }}"
+          title="{{ prod.name }}"
+          img="{{ prod.main_img }}"
+        ></app-single-product>
+      </div>
+    </div>
+  </section>
+</main>
