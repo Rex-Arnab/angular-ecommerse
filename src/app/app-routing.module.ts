@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './components/order/order.component';
 import { Page404Component } from './errorPage/page404/page404.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -20,14 +22,19 @@ const routes: Routes = [{
     },{
       path: 'product',
       pathMatch: 'full',
-      component: ProductComponent,
-      children: [{
-        path: ':id',
-        component: ShopComponent
-      }]
+      component: ProductComponent
+    },{
+      path: 'product/:id',
+      component: ShopComponent
     },{
       path: 'login',
       component: LoginComponent
+    },{
+      path: 'cart',
+      component: CartComponent
+    },{
+      path: 'order',
+      component: OrderComponent
     },{
       path: '**',
       component: Page404Component

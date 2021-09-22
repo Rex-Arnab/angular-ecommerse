@@ -2,3 +2,40 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.product-card {
+  box-shadow: 0 0 5px grey;
+}
+.product-body {
+  border: 1px solid rgb(196, 196, 196);
+  padding: 3px 10px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-weight: bold;
+}
+.sub-title {
+  color: rgb(110, 110, 110);
+}
+.sub-star {
+  color: rgb(80, 80, 80);
+}
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.sub-discount {
+  color: rgb(148, 143, 143);
+  text-decoration: line-through;
+}
+.price {
+  color: rgb(172, 12, 118);
+  font-weight: bold;
+  font-size: 25px;
+}
+.stock {
+  font-weight: 600;
+  color: rgb(1, 163, 1);
+}

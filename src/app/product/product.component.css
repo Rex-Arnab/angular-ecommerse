@@ -10,6 +10,7 @@ main {
 
 #filterOption {
   display: none;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 900px) {
@@ -27,10 +28,12 @@ main {
   }
 }
 .productFlex .product {
-  border: 10px solid transparent;
+  border: 1px solid transparent;
   transition: 200ms all;
+  opacity: 90%;
 }
 .productFlex .product:hover {
+  opacity: 100%;
   border: 1px solid transparent;
 }
 a {

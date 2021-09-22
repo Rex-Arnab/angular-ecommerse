@@ -8,10 +8,36 @@ import data from "src/app/data"
 })
 export class ProductComponent implements OnInit {
 
-  public product: any = data
+
+  private _data: any = data;
+  public product: any = this._data;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeOrder(field: any){
+    if(field.value == 'lowestprice'){
+      this.product = this.product.sort()
+    } else if(field.value == 'highestprice'){
+      this.product = this.product.sort().reverse()
+    }
+  }
+
+  changeGender(gender: string){
+    if(gender == 'Select'){
+      this.product = this._data;
+      return
+    }
+    this.product = this._data.filter((prod: any) => prod.category == gender)
+  }
+
+  changeSize(product_size: string){
+    if(product_size == 'ALL'){
+      this.product = this._data;
+      return
+    }
+    this.product = this.product.filter((prod: any) => prod.size.includes(product_size))
   }
 
 }

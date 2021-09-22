@@ -17,6 +17,8 @@ import { Page404Component } from './errorPage/page404/page404.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { OrderComponent } from './components/order/order.component';
+import { SmallSingleProductComponent } from './components/small-single-product/small-single-product.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { SingleProductComponent } from './components/single-product/single-produ
     SliderComponent,
     Page404Component,
     LoginComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    OrderComponent,
+    SmallSingleProductComponent
   ],
   imports: [
     BrowserModule,

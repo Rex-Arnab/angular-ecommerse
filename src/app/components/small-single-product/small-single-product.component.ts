@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-single-product',
-  templateUrl: './single-product.component.html',
-  styleUrls: ['./single-product.component.css']
+  selector: 'app-small-single-product',
+  templateUrl: './small-single-product.component.html',
+  styleUrls: ['./small-single-product.component.css']
 })
-export class SingleProductComponent implements OnInit {
+export class SmallSingleProductComponent implements OnInit {
 
   @Input() pid = "";
   @Input() title = '';
@@ -13,8 +13,9 @@ export class SingleProductComponent implements OnInit {
   @Input() price = '';
   @Input() discount = '';
   public stars: any = Array(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
+
   constructor() {
-    console.log(this.stars)
+    console.log(this.img)
   }
 
   ngOnInit(): void {
