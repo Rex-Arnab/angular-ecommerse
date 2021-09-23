@@ -34,6 +34,7 @@ export class ShopComponent implements OnInit {
     if(action === 'add'){
       this.quantity++;
     } else if(action === 'subtract'){
+      if(this.quantity == 1) { return }
       this.quantity--;
     }
   }
