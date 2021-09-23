@@ -16,6 +16,7 @@
         hover:bg-blue-500
         focus:outline-none focus:bg-blue-500
       "
+      (click)="addToCartProduct({id:pid, image: img, title: title, price: price})"
     >
       <svg
         class="h-5 w-5"

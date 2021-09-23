@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {addToCart, cartArray}  from '../../cartData'
 
 @Component({
   selector: 'app-small-single-product',
@@ -19,6 +20,12 @@ export class SmallSingleProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  addToCartProduct(data: any){
+    console.log(data)
+    addToCart(data)
+    console.log(cartArray)
   }
 
 }
