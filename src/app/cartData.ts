@@ -1,4 +1,4 @@
-const cartArray: any = [];
+var cartArray: any = [];
 
 let isExist = (data: any) => {
     let result: boolean = false;
@@ -17,6 +17,14 @@ const addToCart = (data: any) => {
     } else {
         cartArray.push(data);
     }
+}
+
+const removeFromCart = (id: any) => {
+    cartArray = cartArray.filter((product: any) => {
+        if(id != product.id){
+            return product
+        }
+    })
 }
 
 export {

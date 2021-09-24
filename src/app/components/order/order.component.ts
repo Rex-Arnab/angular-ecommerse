@@ -22,5 +22,8 @@ export class OrderComponent implements OnInit {
   checkCart(){
     console.log(cartArray)
   }
+  removeProduct(id: number){
+    
+  }
 
 }
