@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import data from "src/app/data"
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-product-card',
   templateUrl: './product.component.html',
@@ -11,7 +11,9 @@ export class ProductComponent implements OnInit {
 
   private _data: any = data;
   public product: any = this._data;
-  constructor() { }
+  constructor(private _title: Title) {
+    this._title.setTitle('Product');
+  }
 
   ngOnInit(): void {
   }

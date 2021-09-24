@@ -164,6 +164,7 @@
           hover:bg-gray-200
           focus:outline-none
         "
+        (click)="addProductToCart({id: product.id, image: product.main_img, title: product.name, price: product.price, quantity: quantity})"
       >
         <svg
           class="h-5 w-5"

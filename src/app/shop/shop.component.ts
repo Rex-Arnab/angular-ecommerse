@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import data from "src/app/data"
+import data from "src/app/data";
+import { Title } from '@angular/platform-browser';
+import {addToCart, cartArray}  from '../cartData'
 
 @Component({
   selector: 'app-shop',
@@ -9,7 +11,9 @@ import data from "src/app/data"
 })
 export class ShopComponent implements OnInit {
 
-  constructor(public router:ActivatedRoute) { }
+  constructor(public router:ActivatedRoute,private _title: Title) {
+    this._title.setTitle('Description');
+   }
   public pid: (string|null) = "";
   public product: any = {}
 
@@ -37,6 +41,11 @@ export class ShopComponent implements OnInit {
       if(this.quantity == 1) { return }
       this.quantity--;
     }
+  }
+
+  addProductToCart(data: any){
+    addToCart(data)
+    console.log(cartArray)
   }
 
 }
