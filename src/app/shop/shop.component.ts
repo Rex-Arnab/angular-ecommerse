@@ -48,4 +48,5 @@ export class ShopComponent implements OnInit {
     console.log(cartArray)
   }
 
+
 }

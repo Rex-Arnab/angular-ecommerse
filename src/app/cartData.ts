@@ -29,5 +29,6 @@ const removeFromCart = (id: any) => {
 
 export {
     addToCart,
-    cartArray
+    cartArray,
+    removeFromCart
 }
